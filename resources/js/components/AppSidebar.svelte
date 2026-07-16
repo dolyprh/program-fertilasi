@@ -1,12 +1,14 @@
 <script lang="ts">
     import { Link } from '@inertiajs/svelte';
-    import BookOpen from 'lucide-svelte/icons/book-open';
-    import FolderGit2 from 'lucide-svelte/icons/folder-git-2';
-    import LayoutGrid from 'lucide-svelte/icons/layout-grid';
+    import ClipboardPlus from 'lucide-svelte/icons/clipboard-plus';
+    import GitBranch from 'lucide-svelte/icons/git-branch';
+    import History from 'lucide-svelte/icons/history';
+    import LayoutDashboard from 'lucide-svelte/icons/layout-dashboard';
     import type { Snippet } from 'svelte';
     import AppLogo from '@/components/AppLogo.svelte';
     import NavFooter from '@/components/NavFooter.svelte';
     import NavMain from '@/components/NavMain.svelte';
+    import NavMasterMenu from '@/components/NavMasterMenu.svelte';
     import NavUser from '@/components/NavUser.svelte';
     import {
         Sidebar,
@@ -18,7 +20,8 @@
         SidebarMenuItem,
     } from '@/components/ui/sidebar';
     import { toUrl } from '@/lib/utils';
-    import { dashboard } from '@/routes';
+    import { dashboard, modelInformation } from '@/routes';
+    import { create, index } from '@/routes/classifications';
     import type { NavItem } from '@/types';
 
     let {
@@ -31,20 +34,22 @@
         {
             title: 'Dashboard',
             href: dashboard(),
-            icon: LayoutGrid,
-        },
-    ];
-
-    const footerNavItems: NavItem[] = [
-        {
-            title: 'Repository',
-            href: 'https://github.com/laravel/svelte-starter-kit',
-            icon: FolderGit2,
+            icon: LayoutDashboard,
         },
         {
-            title: 'Documentation',
-            href: 'https://laravel.com/docs/starter-kits#svelte',
-            icon: BookOpen,
+            title: 'Klasifikasi Baru',
+            href: create(),
+            icon: ClipboardPlus,
+        },
+        {
+            title: 'Riwayat Klasifikasi',
+            href: index(),
+            icon: History,
+        },
+        {
+            title: 'Informasi Model',
+            href: modelInformation(),
+            icon: GitBranch,
         },
     ];
 </script>
@@ -70,10 +75,11 @@
 
     <SidebarContent>
         <NavMain items={mainNavItems} />
+        <NavMasterMenu />
     </SidebarContent>
 
     <SidebarFooter>
-        <NavFooter items={footerNavItems} />
+        <NavFooter items={[]} />
         <NavUser />
     </SidebarFooter>
 </Sidebar>

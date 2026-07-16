@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Link } from '@inertiajs/svelte';
+    import { Link, page } from '@inertiajs/svelte';
     import type { Snippet } from 'svelte';
     import AppLogoIcon from '@/components/AppLogoIcon.svelte';
     import { home } from '@/routes';
@@ -13,6 +13,8 @@
         description?: string;
         children?: Snippet;
     } = $props();
+
+    const appName = $derived(page.props.name);
 </script>
 
 <div
@@ -32,6 +34,7 @@
                             class="size-9 fill-current text-(--foreground) dark:text-white"
                         />
                     </div>
+                    <span class="text-center text-sm font-semibold">{appName}</span>
                     <span class="sr-only">{title}</span>
                 </Link>
                 <div class="space-y-2 text-center">

@@ -16,7 +16,7 @@
 </script>
 
 {#if variant === 'sidebar'}
-    <SidebarInset class={className}>
+    <SidebarInset class={cn('bg-transparent', className)}>
         {@render children?.()}
     </SidebarInset>
 {:else}

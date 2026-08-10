@@ -14,10 +14,10 @@
 <script lang="ts">
     import { Form, Link, router } from '@inertiajs/svelte';
     import AppHead from '@/components/AppHead.svelte';
-    import Heading from '@/components/Heading.svelte';
+    import PageHeader from '@/components/PageHeader.svelte';
+    import PageShell from '@/components/PageShell.svelte';
     import { Badge } from '@/components/ui/badge';
     import { Button } from '@/components/ui/button';
-    import { Input } from '@/components/ui/input';
     import { Label } from '@/components/ui/label';
     import { create, index, show } from '@/routes/classifications';
     import { formatVisitDate } from '@/lib/utils';
@@ -49,31 +49,25 @@
 
 <AppHead title="Riwayat Klasifikasi" />
 
-<div class="flex flex-col gap-6 p-4">
-    <div class="flex flex-wrap items-start justify-between gap-4">
-        <Heading
-            title="Riwayat Klasifikasi"
-            description="Daftar klasifikasi yang telah Anda proses."
-        />
-        <Button asChild>
-            {#snippet children(props)}
-                <Link href={create()} {...props}>Klasifikasi Baru</Link>
-            {/snippet}
-        </Button>
-    </div>
-
-    <Form
-        {...index.form()}
-        class="grid gap-4 rounded-xl border p-4 md:grid-cols-2 xl:grid-cols-4"
+<PageShell>
+    <PageHeader
+        title="Riwayat Klasifikasi"
+        description="Telusuri dan filter semua klasifikasi yang pernah Anda proses."
     >
+        {#snippet actions()}
+            <Button asChild>
+                {#snippet children(props)}
+                    <Link href={create()} {...props}>+ Klasifikasi Baru</Link>
+                {/snippet}
+            </Button>
+        {/snippet}
+    </PageHeader>
+
+    <Form {...index.form()} class="filter-panel">
         {#snippet children({ processing })}
             <div class="grid gap-2">
                 <Label for="current_promil_id">Promil Saat Ini</Label>
-                <select
-                    id="current_promil_id"
-                    name="current_promil_id"
-                    class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs"
-                >
+                <select id="current_promil_id" name="current_promil_id" class="form-select">
                     <option value="">Semua</option>
                     {#each currentPromils as promil (promil.id)}
                         <option
@@ -87,11 +81,7 @@
             </div>
             <div class="grid gap-2">
                 <Label for="prediction_result">Hasil</Label>
-                <select
-                    id="prediction_result"
-                    name="prediction_result"
-                    class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs"
-                >
+                <select id="prediction_result" name="prediction_result" class="form-select">
                     <option value="">Semua</option>
                     {#each predictionResults as result (result)}
                         <option
@@ -105,11 +95,7 @@
             </div>
             <div class="grid gap-2">
                 <Label for="status">Status</Label>
-                <select
-                    id="status"
-                    name="status"
-                    class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs"
-                >
+                <select id="status" name="status" class="form-select">
                     <option value="">Semua</option>
                     {#each statuses as status (status.value)}
                         <option
@@ -128,9 +114,9 @@
         {/snippet}
     </Form>
 
-    <div class="overflow-x-auto rounded-xl border">
+    <div class="data-table-wrap">
         <table class="w-full min-w-[880px] text-left text-sm">
-            <thead class="border-b bg-muted/40">
+            <thead>
                 <tr>
                     <th class="px-4 py-3 font-medium">Nama Pasien</th>
                     <th class="px-4 py-3 font-medium">Tanggal Kunjungan</th>
@@ -152,8 +138,8 @@
                     </tr>
                 {:else}
                     {#each classifications.data as item (item.id)}
-                        <tr class="border-b last:border-0">
-                            <td class="px-4 py-3 font-medium">{item.patient_name}</td>
+                        <tr>
+                            <td class="px-4 py-3.5 font-medium">{item.patient_name}</td>
                             <td class="px-4 py-3">{formatVisitDate(item.visit_date)}</td>
                             <td class="px-4 py-3">{item.age}</td>
                             <td class="px-4 py-3">{item.doctor?.name ?? '—'}</td>
@@ -162,9 +148,8 @@
                             <td class="px-4 py-3">{item.rule_code ?? '—'}</td>
                             <td class="px-4 py-3">
                                 <Badge
-                                    variant={item.status === 'classified'
-                                        ? 'default'
-                                        : 'secondary'}
+                                    variant={item.status === 'classified' ? 'default' : 'secondary'}
+                                    class="rounded-lg"
                                 >
                                     {item.status === 'classified' ? 'Classified' : 'No Rule'}
                                 </Badge>
@@ -213,4 +198,4 @@
             </div>
         </div>
     {/if}
-</div>
+</PageShell>

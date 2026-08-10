@@ -88,7 +88,7 @@
 
                 <Button
                     type="submit"
-                    class="h-11 w-full bg-teal-600 text-white hover:bg-teal-700"
+                    class="h-11 w-full"
                     disabled={processing}
                     data-test="login-button"
                 >
@@ -101,12 +101,12 @@
         </Form>
 
         <div
-            class="rounded-xl border border-dashed border-teal-200 bg-teal-50/70 px-4 py-3 text-sm text-teal-900 dark:border-teal-900/50 dark:bg-teal-950/20 dark:text-teal-100"
+            class="rounded-xl border border-dashed border-primary/25 bg-primary/5 px-4 py-3 text-sm text-foreground"
         >
             <p class="font-medium">Akun default pengembangan</p>
-            <p class="mt-1 text-teal-800/90 dark:text-teal-100/80">
-                Username: <span class="font-semibold">admin@admin.com</span> · Password:
-                <span class="font-semibold">admin</span>
+            <p class="mt-1 text-muted-foreground">
+                Username: <span class="font-semibold text-foreground">admin@admin.com</span> · Password:
+                <span class="font-semibold text-foreground">admin</span>
             </p>
         </div>
     </div>

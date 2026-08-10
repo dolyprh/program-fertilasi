@@ -18,7 +18,8 @@
 <script lang="ts">
     import { Link } from '@inertiajs/svelte';
     import AppHead from '@/components/AppHead.svelte';
-    import Heading from '@/components/Heading.svelte';
+    import PageHeader from '@/components/PageHeader.svelte';
+    import PageShell from '@/components/PageShell.svelte';
     import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
     import { Badge } from '@/components/ui/badge';
     import { Button } from '@/components/ui/button';
@@ -63,13 +64,9 @@
 
 <AppHead title={`Hasil ${classification.case_code}`} />
 
-<div class="flex flex-col gap-6 p-4">
-    <div class="flex flex-wrap items-start justify-between gap-4">
-        <Heading
-            title="Hasil Klasifikasi"
-            description={`Case code ${classification.case_code}`}
-        />
-        <div class="flex flex-wrap gap-2">
+<PageShell>
+    <PageHeader title="Hasil Klasifikasi" description={`Case code ${classification.case_code}`}>
+        {#snippet actions()}
             <Button variant="outline" asChild>
                 {#snippet children(props)}
                     <Link href={index()} {...props}>Riwayat</Link>
@@ -80,8 +77,8 @@
                     <Link href={create()} {...props}>Klasifikasi Baru</Link>
                 {/snippet}
             </Button>
-        </div>
-    </div>
+        {/snippet}
+    </PageHeader>
 
     <div class="grid gap-6 lg:grid-cols-2">
         <Card>
@@ -158,28 +155,28 @@
         </CardHeader>
         <CardContent class="space-y-4">
             {#if isClassified}
-                <div class="space-y-2">
-                    <p class="text-sm text-muted-foreground">Hasil Klasifikasi</p>
-                    <p class="text-2xl font-semibold tracking-tight">
+                <div class="space-y-2 rounded-2xl border border-primary/20 bg-primary/5 p-5">
+                    <p class="text-sm font-medium text-muted-foreground">Hasil Klasifikasi</p>
+                    <p class="text-3xl font-bold tracking-tight text-primary">
                         {classification.prediction_result}
                     </p>
                 </div>
                 <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-                    <div class="rounded-lg border p-3">
+                    <div class="rounded-xl border border-border/60 bg-background/50 p-3.5">
                         <p class="text-xs text-muted-foreground">Rule</p>
                         <p class="font-medium">{classification.rule_code}</p>
                     </div>
-                    <div class="rounded-lg border p-3">
+                    <div class="rounded-xl border border-border/60 bg-background/50 p-3.5">
                         <p class="text-xs text-muted-foreground">Confidence</p>
                         <p class="font-medium">{formatPercent(classification.confidence)}%</p>
                     </div>
-                    <div class="rounded-lg border p-3">
+                    <div class="rounded-xl border border-border/60 bg-background/50 p-3.5">
                         <p class="text-xs text-muted-foreground">Dukungan</p>
                         <p class="font-medium">
                             {classification.support_count} dari {trainingCount} data latih
                         </p>
                     </div>
-                    <div class="rounded-lg border p-3">
+                    <div class="rounded-xl border border-border/60 bg-background/50 p-3.5">
                         <p class="text-xs text-muted-foreground">Support</p>
                         <p class="font-medium">
                             {formatPercent(classification.support_percentage)}%
@@ -207,11 +204,11 @@
         </CardContent>
     </Card>
 
-    <Alert>
-        <AlertTitle>Disclaimer</AlertTitle>
-        <AlertDescription>
+    <Alert class="rounded-2xl border-amber-200/60 bg-amber-50/80 dark:border-amber-900/40 dark:bg-amber-950/20">
+        <AlertTitle class="text-amber-900 dark:text-amber-100">Disclaimer</AlertTitle>
+        <AlertDescription class="text-amber-800/90 dark:text-amber-100/80">
             Hasil klasifikasi merupakan pola berdasarkan data historis penelitian dan tidak
             menggantikan keputusan dokter.
         </AlertDescription>
     </Alert>
-</div>
+</PageShell>

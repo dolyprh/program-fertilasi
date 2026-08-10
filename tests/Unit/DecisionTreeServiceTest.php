@@ -6,11 +6,11 @@ beforeEach(function () {
     $this->service = new DecisionTreeService;
 });
 
-test('rules metadata contains fourteen rules with support totaling 101', function () {
+test('rules metadata contains seventy eight rules with support totaling 597', function () {
     $rules = $this->service->rules();
 
-    expect($rules)->toHaveCount(14)
-        ->and(collect($rules)->sum('support_count'))->toBe(101);
+    expect($rules)->toHaveCount(78)
+        ->and(collect($rules)->sum('support_count'))->toBe(597);
 });
 
 test('classifies according to decision rules', function (
@@ -30,26 +30,22 @@ test('classifies according to decision rules', function (
         ->and($result['rule_code'])->toBe($ruleCode)
         ->and($result['prediction'])->toBe($prediction);
 })->with([
-    'R1 age 29 alami' => [29, 'ALAMI', 'LAINNYA', 'R1', 'PRO IVF'],
-    'R2 age 28 alami' => [28, 'ALAMI', 'LAINNYA', 'R2', 'PRO Stimulasi IUI'],
-    'R3 age 27 alami' => [27, 'ALAMI', 'LAINNYA', 'R3', 'PRO ST'],
-    'R4 belum promil' => [35, 'BELUM_PROMIL', 'LAINNYA', 'R4', 'PRO IUI/PRO IVF'],
-    'R5 iui' => [35, 'IUI', 'LAINNYA', 'R5', 'PRO IUI'],
-    'R6 ivf age 40' => [40, 'IVF', 'LAINNYA', 'R6', 'PRO Stimulasi FET'],
-    'R7 ivf age 41 ho' => [41, 'IVF', 'HO', 'R7', 'PRO Stimulasi FET'],
-    'R8 ivf age 41 kontrol' => [41, 'IVF', 'KONTROL_D2_D5', 'R8', 'PRO Stimulasi FET'],
-    'R9 ivf age 41 prp' => [41, 'IVF', 'PRP_OVARIUM_TRANSVAGINAL', 'R9', 'PRO Stimulasi IVF'],
-    'R10 ivf age 41 akupuntur' => [41, 'IVF', 'PAKET_AKUPUNTUR_12X_KE_6', 'R10', 'PRO Stimulasi FET'],
-    'R11 pemeriksaan dasar 47' => [47, 'PEMERIKSAAN_DASAR', 'LAINNYA', 'R11', 'PRO IUI'],
-    'R12 pemeriksaan dasar 46' => [46, 'PEMERIKSAAN_DASAR', 'LAINNYA', 'R12', 'PRO IVF'],
-    'R13 pemeriksaan dasar 28' => [28, 'PEMERIKSAAN_DASAR', 'LAINNYA', 'R13', 'PRO IUI'],
-    'R14 senggama terjadwal' => [35, 'SENGGAMA_TERJADWAL', 'LAINNYA', 'R14', 'PRO IUI'],
+    'R1 alami age 30' => [30, 'ALAMI', 'LAINNYA', 'R1', 'PRO IVF'],
+    'R9 alami age 29 kontrol d2d5' => [29, 'ALAMI', 'KONTROL_D2_D5', 'R9', 'PRO ST'],
+    'R19 belum promil age 30' => [30, 'BELUM_PROMIL', 'LAINNYA', 'R19', 'PRO IUI'],
+    'R18 belum promil age 44' => [44, 'BELUM_PROMIL', 'LAINNYA', 'R18', 'PRO Stimulasi IVF'],
+    'R21 iui kontrol d2d5' => [35, 'IUI', 'KONTROL_D2_D5', 'R21', 'PRO Stimulasi IUI'],
+    'R23 ivf age 44' => [44, 'IVF', 'LAINNYA', 'R23', 'PRO Stimulasi IVF'],
+    'R31 ivf age 35 kontrol' => [35, 'IVF', 'KONTROL_D2_D5', 'R31', 'PRO Stimulasi FET'],
+    'R68 pemeriksaan konsul usg fw age 30' => [30, 'PEMERIKSAAN_DASAR', 'KONSUL_USG_FW', 'R68', 'PRO IVF'],
+    'R76 senggama age 28' => [28, 'SENGGAMA_TERJADWAL', 'LAINNYA', 'R76', 'PRO IUI'],
+    'R78 senggama age 26' => [26, 'SENGGAMA_TERJADWAL', 'LAINNYA', 'R78', 'PRO IUI/PRO IVF'],
 ]);
 
-test('returns no rule for ivf age 41 with unmatched action', function () {
+test('returns no rule for alami young with unmatched action', function () {
     $result = $this->service->classify([
-        'age' => 41,
-        'current_promil_code' => 'IVF',
+        'age' => 28,
+        'current_promil_code' => 'ALAMI',
         'current_action_code' => 'LAINNYA',
     ]);
 
@@ -61,32 +57,32 @@ test('returns no rule for ivf age 41 with unmatched action', function () {
         ->and($result['support_percentage'])->toBeNull();
 });
 
-test('returns expected confidence for R6', function () {
+test('returns expected confidence for R31 ivf kontrol d2d5', function () {
     $result = $this->service->classify([
         'age' => 35,
         'current_promil_code' => 'IVF',
         'current_action_code' => 'KONTROL_D2_D5',
     ]);
 
-    expect($result['rule_code'])->toBe('R6')
-        ->and($result['confidence'])->toBe(95.83)
-        ->and($result['support_count'])->toBe(24)
-        ->and($result['support_percentage'])->toBe(23.76);
+    expect($result['rule_code'])->toBe('R31')
+        ->and($result['confidence'])->toBe(78.57)
+        ->and($result['support_count'])->toBe(14)
+        ->and($result['support_percentage'])->toBe(2.35);
 });
 
-test('returns expected support for R3', function () {
+test('returns expected support for R1 alami older', function () {
     $result = $this->service->classify([
-        'age' => 27,
+        'age' => 35,
         'current_promil_code' => 'ALAMI',
         'current_action_code' => 'LAINNYA',
     ]);
 
-    expect($result['rule_code'])->toBe('R3')
-        ->and($result['support_count'])->toBe(3)
-        ->and($result['support_percentage'])->toBe(2.97);
+    expect($result['rule_code'])->toBe('R1')
+        ->and($result['support_count'])->toBe(197)
+        ->and($result['support_percentage'])->toBe(33.0);
 
-    $rules = collect($this->service->rules())->firstWhere('code', 'R3');
+    $rules = collect($this->service->rules())->firstWhere('code', 'R1');
 
-    expect($rules['support_count'])->toBe(3)
-        ->and($rules['support_percentage'])->toBe(2.97);
+    expect($rules['support_count'])->toBe(197)
+        ->and($rules['support_percentage'])->toBe(33.0);
 });

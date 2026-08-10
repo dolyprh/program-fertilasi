@@ -31,7 +31,7 @@
 
 <div class="grid min-h-svh lg:grid-cols-2">
     <section
-        class="relative hidden overflow-hidden bg-linear-to-br from-teal-700 via-teal-600 to-cyan-700 px-10 py-12 text-white lg:flex lg:flex-col lg:justify-between"
+        class="relative hidden overflow-hidden bg-linear-to-br from-emerald-600 via-teal-600 to-cyan-600 px-10 py-12 text-white lg:flex lg:flex-col lg:justify-between"
     >
         <div
             class="pointer-events-none absolute -top-24 -right-24 size-72 rounded-full bg-white/10 blur-3xl"
@@ -80,7 +80,7 @@
     </section>
 
     <section
-        class="flex items-center justify-center bg-linear-to-b from-teal-50/60 to-background px-6 py-10 dark:from-teal-950/20 dark:to-background"
+        class="flex items-center justify-center bg-linear-to-b from-teal-50/70 to-background px-6 py-10 dark:from-teal-950/20 dark:to-background"
     >
         <div class="w-full max-w-md">
             <div class="mb-8 space-y-2 text-center lg:hidden">
@@ -96,7 +96,7 @@
             </div>
 
             <div
-                class="rounded-2xl border border-teal-100/80 bg-card/95 p-6 shadow-xl shadow-teal-900/5 backdrop-blur-sm dark:border-teal-900/40"
+                class="rounded-2xl border border-white/60 bg-card/95 p-6 shadow-xl shadow-teal-900/8 backdrop-blur-md dark:border-teal-900/40"
             >
                 {@render children?.()}
             </div>

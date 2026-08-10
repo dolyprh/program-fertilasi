@@ -1,0 +1,92 @@
+Promil Saat Ini = Alami
+|   Umur > 29.500: PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=7, PRO IUI=37, PRO Stimulasi IUI=9, PRO Stimulasi IVF=29, PRO IVF=108, PRO Alami=1, PRO ST=6}
+|   Umur ≤ 29.500
+|   |   Tindakan Hari Ini = HDSP: PRO Stimulasi IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=1, PRO Stimulasi IUI=2, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=1}
+|   |   Tindakan Hari Ini = HDSP + GA: PRO IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=1, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = HYPOSY: PRO ST {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=1}
+|   |   Tindakan Hari Ini = Konsul Only: PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=1, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Konsul Usg FW: PRO IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=1, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Kontrol D12-D13 (Pertengahan Siklus): PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=1, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=2, PRO Alami=0, PRO ST=2}
+|   |   Tindakan Hari Ini = Kontrol D2 haid: PRO Stimulasi IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=1, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Kontrol D2-D5: PRO ST {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=5, PRO Stimulasi IUI=1, PRO Stimulasi IVF=0, PRO IVF=2, PRO Alami=0, PRO ST=6}
+|   |   Tindakan Hari Ini = Kontrol Only: PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=1, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=3, PRO Alami=2, PRO ST=2}
+|   |   Tindakan Hari Ini = Kontrol Post HDSP: PRO IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=1, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Kontrol Usg: PRO ST {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=2, PRO Alami=0, PRO ST=5}
+|   |   Tindakan Hari Ini = Paket Akupuntur 6x Ke 3: PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=2, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 6x Ke 4: PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=1, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 6x Ke 5: PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=1, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = SA + DFI + Kontrol: PRO Stimulasi IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=2, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = SA + Kontrol: PRO IUI/PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=1, PRO IUI=1, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=1, PRO Alami=0, PRO ST=0}
+Promil Saat Ini = Belum Promil
+|   Umur > 42: PRO Stimulasi IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=1, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   Umur ≤ 42
+|   |   Umur > 25: PRO IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=4, PRO IUI=17, PRO Stimulasi IUI=3, PRO Stimulasi IVF=1, PRO IVF=14, PRO Alami=2, PRO ST=6}
+|   |   Umur ≤ 25: PRO Alami {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=1, PRO ST=0}
+Promil Saat Ini = IUI
+|   Tindakan Hari Ini = Kontrol D2-D5: PRO Stimulasi IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=1, PRO Stimulasi IUI=2, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   Tindakan Hari Ini = Kontrol Stimulasi IUI: PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=1, PRO Alami=0, PRO ST=0}
+Promil Saat Ini = IVF
+|   Umur > 43: PRO Stimulasi IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=1, PRO IVF=1, PRO Alami=0, PRO ST=0}
+|   Umur ≤ 43
+|   |   Tindakan Hari Ini = Elektroakupuntur: PRO Stimulasi FET {PRO Stimulasi FET=3, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = HD: PRO Stimulasi FET {PRO Stimulasi FET=6, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=1, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = HDSP: PRO Stimulasi FET {PRO Stimulasi FET=1, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Konsul + Elektroakupuntur: PRO Stimulasi FET {PRO Stimulasi FET=5, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Konsul dan USG: PRO Stimulasi FET {PRO Stimulasi FET=1, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Kontrol + Elektroakupuntur: PRO Stimulasi FET {PRO Stimulasi FET=16, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Kontrol D12-D13 (Pertengahan Siklus): PRO Stimulasi FET {PRO Stimulasi FET=6, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Kontrol D2-D5: PRO Stimulasi FET {PRO Stimulasi FET=11, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=3, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Kontrol Mini Stimulasi IVF: PRO Stimulasi IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=1, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Kontrol Only: PRO Stimulasi FET {PRO Stimulasi FET=1, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Kontrol Post OPU: PRO Stimulasi FET {PRO Stimulasi FET=16, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=1, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Kontrol Stimulasi FET: PRO Stimulasi FET {PRO Stimulasi FET=10, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Kontrol Stimulasi IVF: PRO Stimulasi IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=5, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Kontrol USG: PRO Stimulasi FET {PRO Stimulasi FET=1, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Kontrol Usg: PRO Stimulasi FET {PRO Stimulasi FET=18, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=2, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Kontrol dan USG: PRO Stimulasi FET {PRO Stimulasi FET=1, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=1, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = OPU: PRO Stimulasi FET {PRO Stimulasi FET=4, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=1, PRO IVF=1, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = OPU + HDSP: PRO Stimulasi FET {PRO Stimulasi FET=1, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 12x Ke 1: PRO Stimulasi FET {PRO Stimulasi FET=1, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 12x Ke 11: PRO Stimulasi FET {PRO Stimulasi FET=1, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 12x Ke 12: PRO Stimulasi FET {PRO Stimulasi FET=1, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 12x Ke 2: PRO Stimulasi FET {PRO Stimulasi FET=3, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 12x Ke 3: PRO Stimulasi FET {PRO Stimulasi FET=3, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 12x Ke 4: PRO Stimulasi FET {PRO Stimulasi FET=2, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 12x Ke 5: PRO Stimulasi FET {PRO Stimulasi FET=1, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=1, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 12x Ke 6: PRO Stimulasi FET {PRO Stimulasi FET=2, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 12x Ke 7: PRO Stimulasi FET {PRO Stimulasi FET=2, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 12x Ke 8: PRO Stimulasi FET {PRO Stimulasi FET=1, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 6x Ke 1: PRO Stimulasi FET {PRO Stimulasi FET=1, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 6x Ke 2: PRO Stimulasi FET {PRO Stimulasi FET=4, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=1, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 6x Ke 3: PRO Stimulasi FET {PRO Stimulasi FET=7, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 6x Ke 4: PRO Stimulasi FET {PRO Stimulasi FET=4, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 6x Ke 5: PRO Stimulasi FET {PRO Stimulasi FET=4, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Tindakan Hari Ini = Paket Akupuntur 6x Ke 6: PRO Stimulasi FET {PRO Stimulasi FET=2, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+Promil Saat Ini = Pemeriksaan Dasar
+|   Tindakan Hari Ini = HYPOSY: PRO IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=1, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   Tindakan Hari Ini = Konsul + SA + DFI (New/ Rujukan DPJP BI): PRO Stimulasi IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=1, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   Tindakan Hari Ini = Konsul FW: PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=2, PRO Alami=0, PRO ST=0}
+|   Tindakan Hari Ini = Konsul FW + SA
+|   |   Umur > 37.500: PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=2, PRO Alami=0, PRO ST=0}
+|   |   Umur ≤ 37.500: PRO IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=1, PRO IUI=4, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=2, PRO Alami=3, PRO ST=1}
+|   Tindakan Hari Ini = Konsul FW + SA + DFI: PRO IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=1, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   Tindakan Hari Ini = Konsul FW Only
+|   |   Umur > 44.500: PRO Stimulasi IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=1, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   |   Umur ≤ 44.500: PRO IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=3, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=3, PRO Alami=2, PRO ST=1}
+|   Tindakan Hari Ini = Konsul Only (New/ Rujukan DPJP BI): PRO Stimulasi IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=2, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   Tindakan Hari Ini = Konsul Usg (New/ Rujukan DPJP BI): PRO Stimulasi FET {PRO Stimulasi FET=1, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=1, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   Tindakan Hari Ini = Konsul Usg FW
+|   |   Umur > 25.500: PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=7, PRO IUI=17, PRO Stimulasi IUI=0, PRO Stimulasi IVF=1, PRO IVF=19, PRO Alami=5, PRO ST=15}
+|   |   Umur ≤ 25.500: PRO IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=1, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   Tindakan Hari Ini = Kontrol D12-D13 (Pertengahan Siklus): PRO IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=1, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   Tindakan Hari Ini = Kontrol Usg
+|   |   Umur > 32.500: PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=2, PRO Alami=0, PRO ST=0}
+|   |   Umur ≤ 32.500: PRO IUI/PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=1, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=1, PRO Alami=0, PRO ST=0}
+|   Tindakan Hari Ini = SA + DFI + Konsul FW: PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=1, PRO Alami=0, PRO ST=0}
+|   Tindakan Hari Ini = SA + DFI + Kontrol: PRO IUI/PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=1, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=0}
+|   Tindakan Hari Ini = SA + Kontrol: PRO Stimulasi IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=0, PRO IUI=0, PRO Stimulasi IUI=1, PRO Stimulasi IVF=0, PRO IVF=1, PRO Alami=1, PRO ST=0}
+Promil Saat Ini = Senggama Terjadwal
+|   Umur > 26.500
+|   |   Umur > 27.500: PRO IUI {PRO Stimulasi FET=0, PRO IUI/PRO IVF=1, PRO IUI=16, PRO Stimulasi IUI=1, PRO Stimulasi IVF=0, PRO IVF=4, PRO Alami=0, PRO ST=1}
+|   |   Umur ≤ 27.500: PRO IUI/PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=1, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=1, PRO Alami=0, PRO ST=0}
+|   Umur ≤ 26.500: PRO IUI/PRO IVF {PRO Stimulasi FET=0, PRO IUI/PRO IVF=1, PRO IUI=0, PRO Stimulasi IUI=0, PRO Stimulasi IVF=0, PRO IVF=0, PRO Alami=0, PRO ST=1}

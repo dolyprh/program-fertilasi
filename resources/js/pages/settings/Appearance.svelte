@@ -14,18 +14,18 @@
 <script lang="ts">
     import AppearanceTabs from '@/components/AppearanceTabs.svelte';
     import AppHead from '@/components/AppHead.svelte';
-    import Heading from '@/components/Heading.svelte';
+    import PageHeader from '@/components/PageHeader.svelte';
+    import PageShell from '@/components/PageShell.svelte';
 </script>
 
 <AppHead title="Appearance settings" />
 
 <h1 class="sr-only">Appearance settings</h1>
 
-<div class="space-y-6">
-    <Heading
-        variant="small"
+<PageShell class="max-w-3xl">
+    <PageHeader
         title="Appearance settings"
         description="Update the appearance settings for your account"
     />
     <AppearanceTabs />
-</div>
+</PageShell>

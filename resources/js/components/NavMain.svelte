@@ -21,7 +21,9 @@
 </script>
 
 <SidebarGroup class="px-2 py-0">
-    <SidebarGroupLabel>Platform</SidebarGroupLabel>
+    <SidebarGroupLabel class="px-3 text-xs font-semibold tracking-wider uppercase">
+        Menu Utama
+    </SidebarGroupLabel>
     <SidebarMenu>
         {#each items as item (toUrl(item.href))}
             <SidebarMenuItem>
@@ -29,6 +31,7 @@
                     asChild
                     isActive={url.isCurrentUrl(item.href, url.currentUrl)}
                     tooltip={item.title}
+                    class="nav-pill-active rounded-xl"
                 >
                     {#snippet children(props)}
                         <Link

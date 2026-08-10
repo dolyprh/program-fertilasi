@@ -15,7 +15,8 @@
     import { Form, Link } from '@inertiajs/svelte';
     import ClassificationController from '@/actions/App/Http/Controllers/ClassificationController';
     import AppHead from '@/components/AppHead.svelte';
-    import Heading from '@/components/Heading.svelte';
+    import PageHeader from '@/components/PageHeader.svelte';
+    import PageShell from '@/components/PageShell.svelte';
     import InputError from '@/components/InputError.svelte';
     import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
     import { Button } from '@/components/ui/button';
@@ -87,8 +88,8 @@
 
 <AppHead title="Klasifikasi Baru" />
 
-<div class="flex flex-col gap-6 p-4">
-    <Heading
+<PageShell>
+    <PageHeader
         title="Klasifikasi Baru"
         description="Masukkan informasi kunjungan dan data klasifikasi untuk menghasilkan prediksi Promil Selanjutnya."
     />
@@ -170,12 +171,7 @@
 
                         <div class="grid gap-2">
                             <Label for="doctor_id">Dokter Pemeriksa</Label>
-                            <select
-                                id="doctor_id"
-                                name="doctor_id"
-                                required
-                                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
-                            >
+                            <select id="doctor_id" name="doctor_id" required class="form-select">
                                 <option value="">Pilih dokter</option>
                                 {#each doctors as doctor (doctor.id)}
                                     <option value={doctor.id}>{doctor.name}</option>
@@ -197,12 +193,7 @@
                     <CardContent class="space-y-4">
                         <div class="grid gap-2">
                             <Label for="current_promil_id">Promil Saat Ini</Label>
-                            <select
-                                id="current_promil_id"
-                                name="current_promil_id"
-                                required
-                                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
-                            >
+                            <select id="current_promil_id" name="current_promil_id" required class="form-select">
                                 <option value="">Pilih promil saat ini</option>
                                 {#each currentPromils as promil (promil.id)}
                                     <option value={promil.id}>{promil.name}</option>
@@ -213,12 +204,7 @@
 
                         <div class="grid gap-2">
                             <Label for="current_action_id">Tindakan Hari Ini</Label>
-                            <select
-                                id="current_action_id"
-                                name="current_action_id"
-                                required
-                                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
-                            >
+                            <select id="current_action_id" name="current_action_id" required class="form-select">
                                 <option value="">Pilih tindakan</option>
                                 {#each currentActions as action (action.id)}
                                     <option value={action.id}>{action.name}</option>
@@ -234,7 +220,7 @@
                                 name="poa1_option_id"
                                 required
                                 disabled={!canSubmit}
-                                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:opacity-50"
+                                class="form-select disabled:opacity-50"
                             >
                                 <option value="">Pilih PoA1</option>
                                 {#each poa1Options as option (option.id)}
@@ -265,4 +251,4 @@
             </div>
         {/snippet}
     </Form>
-</div>
+</PageShell>

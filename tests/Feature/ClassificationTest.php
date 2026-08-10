@@ -60,7 +60,7 @@ test('store calculates age from visit date and applies decision rule', function 
     expect($classification)->not->toBeNull()
         ->and($classification->age)->toBe(35)
         ->and($classification->prediction_result)->toBe('PRO Stimulasi FET')
-        ->and($classification->rule_code)->toBe('R6')
+        ->and($classification->rule_code)->toBe('R31')
         ->and($classification->status)->toBe(ClassificationStatus::Classified)
         ->and($classification->case_code)->toStartWith('CLS-20260105-')
         ->and($classification->user_id)->toBe($user->id);
@@ -91,21 +91,21 @@ test('store ignores client provided age and prediction fields', function () {
 
     expect($classification->age)->toBe(35)
         ->and($classification->prediction_result)->toBe('PRO Stimulasi FET')
-        ->and($classification->rule_code)->toBe('R6')
+        ->and($classification->rule_code)->toBe('R31')
         ->and($classification->case_code)->not->toBe('CLS-FAKE');
 });
 
 test('store marks no_rule status when no decision rule matches', function () {
     $user = User::factory()->create();
     $doctor = Doctor::factory()->create();
-    $promil = CurrentPromil::factory()->create(['code' => 'IVF']);
+    $promil = CurrentPromil::factory()->create(['code' => 'ALAMI']);
     $action = CurrentAction::factory()->create(['code' => 'LAINNYA']);
     $poa1 = Poa1Option::factory()->create();
 
     $this->actingAs($user)->post(route('classifications.store'), [
         'patient_name' => 'Pasien No Rule',
         'visit_date' => '2026-06-01',
-        'date_of_birth' => '1980-01-01',
+        'date_of_birth' => '1998-01-01',
         'doctor_id' => $doctor->id,
         'current_promil_id' => $promil->id,
         'current_action_id' => $action->id,

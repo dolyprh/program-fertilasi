@@ -15,7 +15,8 @@
     import { Form, page } from '@inertiajs/svelte';
     import SecurityController from '@/actions/App/Http/Controllers/Settings/SecurityController';
     import AppHead from '@/components/AppHead.svelte';
-    import Heading from '@/components/Heading.svelte';
+    import PageHeader from '@/components/PageHeader.svelte';
+    import PageShell from '@/components/PageShell.svelte';
     import InputError from '@/components/InputError.svelte';
     import ManagePasskeys from '@/components/ManagePasskeys.svelte';
     import type { Props as ManagePasskeysProps } from '@/components/ManagePasskeys.svelte';
@@ -42,14 +43,14 @@
 
 <h1 class="sr-only">Security settings</h1>
 
-<div class="space-y-6">
-    <Heading
-        variant="small"
-        title="Update password"
-        description="Ensure your account is using a long, random password to stay secure"
-    />
+<PageShell class="max-w-3xl space-y-8">
+    <section class="space-y-6">
+        <PageHeader
+            title="Update password"
+            description="Ensure your account is using a long, random password to stay secure"
+        />
 
-    <Form
+        <Form
         {...SecurityController.update.form()}
         class="space-y-6"
         options={{ preserveScroll: true }}
@@ -106,12 +107,13 @@
             </div>
         {/snippet}
     </Form>
-</div>
+    </section>
 
-<ManageTwoFactor
-    {canManageTwoFactor}
-    {requiresConfirmation}
-    {twoFactorEnabled}
-/>
+    <ManageTwoFactor
+        {canManageTwoFactor}
+        {requiresConfirmation}
+        {twoFactorEnabled}
+    />
 
-<ManagePasskeys {canManagePasskeys} {passkeys} />
+    <ManagePasskeys {canManagePasskeys} {passkeys} />
+</PageShell>

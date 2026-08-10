@@ -15,7 +15,8 @@
     import { Form, Link } from '@inertiajs/svelte';
     import MasterDataController from '@/actions/App/Http/Controllers/MasterDataController';
     import AppHead from '@/components/AppHead.svelte';
-    import Heading from '@/components/Heading.svelte';
+    import PageHeader from '@/components/PageHeader.svelte';
+    import PageShell from '@/components/PageShell.svelte';
     import InputError from '@/components/InputError.svelte';
     import { Badge } from '@/components/ui/badge';
     import { Button } from '@/components/ui/button';
@@ -57,17 +58,18 @@
 
 <AppHead title={`Kelola ${label}`} />
 
-<div class="flex flex-col gap-6 p-4">
-    <div class="flex flex-wrap items-start justify-between gap-4">
-        <Heading title={label} {description} />
-        <Button variant="outline" asChild>
-            {#snippet children(props)}
-                <Link href={dashboard()} {...props}>Dashboard</Link>
-            {/snippet}
-        </Button>
-    </div>
+<PageShell>
+    <PageHeader title={label} {description}>
+        {#snippet actions()}
+            <Button variant="outline" asChild>
+                {#snippet children(props)}
+                    <Link href={dashboard()} {...props}>Dashboard</Link>
+                {/snippet}
+            </Button>
+        {/snippet}
+    </PageHeader>
 
-    <Card class="border-sky-200/80 bg-white/95">
+    <Card>
         <CardHeader>
             <CardTitle>Tambah Data Baru</CardTitle>
             <CardDescription>Isi kode, nama, urutan, dan status aktif.</CardDescription>
@@ -99,18 +101,14 @@
                     </div>
                     <div class="grid gap-2">
                         <Label for="create-active">Status</Label>
-                        <select
-                            id="create-active"
-                            name="is_active"
-                            class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm"
-                        >
+                        <select id="create-active" name="is_active" class="form-select">
                             <option value="1">Aktif</option>
                             <option value="0">Nonaktif</option>
                         </select>
                         <InputError message={errors.is_active} />
                     </div>
                     <div class="flex items-end">
-                        <Button type="submit" disabled={processing} class="w-full bg-sky-600 hover:bg-sky-700">
+                        <Button type="submit" disabled={processing} class="w-full">
                             {#if processing}<Spinner />{/if}
                             Tambah
                         </Button>
@@ -120,9 +118,9 @@
         </CardContent>
     </Card>
 
-    <div class="overflow-x-auto rounded-xl border border-sky-200/80 bg-white/95">
+    <div class="data-table-wrap">
         <table class="w-full min-w-[880px] text-left text-sm">
-            <thead class="border-b bg-sky-50/80">
+            <thead>
                 <tr>
                     <th class="px-4 py-3 font-medium">Kode</th>
                     <th class="px-4 py-3 font-medium">Nama</th>
@@ -140,7 +138,7 @@
                     </tr>
                 {:else}
                     {#each items as item (item.id)}
-                        <tr class="border-b last:border-0">
+                        <tr>
                             {#if editingId === item.id}
                                 <td colspan="5" class="px-4 py-4">
                                     <Form
@@ -173,17 +171,14 @@
                                             </div>
                                             <div class="grid gap-2">
                                                 <Label>Status</Label>
-                                                <select
-                                                    name="is_active"
-                                                    class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm"
-                                                >
+                                                <select name="is_active" class="form-select">
                                                     <option value="1" selected={item.is_active}>Aktif</option>
                                                     <option value="0" selected={!item.is_active}>Nonaktif</option>
                                                 </select>
                                                 <InputError message={errors.is_active} />
                                             </div>
                                             <div class="flex items-end gap-2 xl:col-span-2">
-                                                <Button type="submit" disabled={processing} class="bg-sky-600 hover:bg-sky-700">
+                                                <Button type="submit" disabled={processing}>
                                                     {#if processing}<Spinner />{/if}
                                                     Simpan
                                                 </Button>
@@ -232,4 +227,4 @@
             </tbody>
         </table>
     </div>
-</div>
+</PageShell>
